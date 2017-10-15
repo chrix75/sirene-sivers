@@ -41,4 +41,10 @@ public class SiretCheckTest {
         assertFalse(check.isCorrect());
     }
 
+    @Test
+    public void tooLongSiret() {
+        SiretCheck check = new SiretCheck("4233009950002700027");
+        assertFalse(check.isCorrect());
+    }
+
 }
