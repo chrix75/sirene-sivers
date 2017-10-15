@@ -3,6 +3,7 @@ package siren.luhn;
 public class SiretCheck {
     private final String siret;
     private final boolean acceptable;
+    private Boolean cached;
 
     public SiretCheck(String siret) {
         String clean = siret.trim();
@@ -20,7 +21,14 @@ public class SiretCheck {
     }
 
     public boolean isCorrect() {
+        if (cached == null) {
+            cached = correctness();
+        }
 
+        return cached;
+    }
+
+    private boolean correctness() {
         if (!acceptable) {
             return false;
         }

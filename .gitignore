@@ -1,0 +1,8 @@
+# Created by .ignore support plugin (hsz.mobi)
+.gitignore
+.gradle/
+.idea/inspectionProfiles/
+.idea/workspace.xml
+out/
+src/test/groovy/
+src/test/resources/
